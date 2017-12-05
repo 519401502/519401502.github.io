@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="#存储过程简介我们常用的操作数据库语言SQL语句在执行的时候需要要先编译，然后执行，而存储过程（Stored Procedure）是一组为了完成特定功能的SQL语句集，经编译后存储在数据库中，用户通过指定存储过程的名字并给定参数（如果该存储过程带有参数）来调用执行它。 一个存储过程是一个可编程的函数，它在数据库中创建并">
+<meta name="description" content="存储过程简介我们常用的操作数据库语言SQL语句在执行的时候需要要先编译，然后执行，而存储过程（Stored Procedure）是一组为了完成特定功能的SQL语句集，经编译后存储在数据库中，用户通过指定存储过程的名字并给定参数（如果该存储过程带有参数）来调用执行它。 一个存储过程是一个可编程的函数，它在数据库中创建并保">
 <meta name="keywords" content="sql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL存储过程详解">
 <meta property="og:url" content="https://519401502.github.io/2017/12/04/MySQL存储过程详解/index.html">
-<meta property="og:site_name" content="徐会闯">
-<meta property="og:description" content="#存储过程简介我们常用的操作数据库语言SQL语句在执行的时候需要要先编译，然后执行，而存储过程（Stored Procedure）是一组为了完成特定功能的SQL语句集，经编译后存储在数据库中，用户通过指定存储过程的名字并给定参数（如果该存储过程带有参数）来调用执行它。 一个存储过程是一个可编程的函数，它在数据库中创建并保存。它可以有SQL语句和一些特殊的控制结构组成。当希望在不同的应用程序或平台上">
+<meta property="og:site_name" content="牛仔很忙的">
+<meta property="og:description" content="存储过程简介我们常用的操作数据库语言SQL语句在执行的时候需要要先编译，然后执行，而存储过程（Stored Procedure）是一组为了完成特定功能的SQL语句集，经编译后存储在数据库中，用户通过指定存储过程的名字并给定参数（如果该存储过程带有参数）来调用执行它。 一个存储过程是一个可编程的函数，它在数据库中创建并保存。它可以有SQL语句和一些特殊的控制结构组成。当希望在不同的应用程序或平台上执">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3764141-be96c7985e3c319d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3764141-40a982a86258f779.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-12-05T04:54:44.000Z">
+<meta property="og:updated_time" content="2017-12-05T04:58:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL存储过程详解">
-<meta name="twitter:description" content="#存储过程简介我们常用的操作数据库语言SQL语句在执行的时候需要要先编译，然后执行，而存储过程（Stored Procedure）是一组为了完成特定功能的SQL语句集，经编译后存储在数据库中，用户通过指定存储过程的名字并给定参数（如果该存储过程带有参数）来调用执行它。 一个存储过程是一个可编程的函数，它在数据库中创建并保存。它可以有SQL语句和一些特殊的控制结构组成。当希望在不同的应用程序或平台上">
+<meta name="twitter:description" content="存储过程简介我们常用的操作数据库语言SQL语句在执行的时候需要要先编译，然后执行，而存储过程（Stored Procedure）是一组为了完成特定功能的SQL语句集，经编译后存储在数据库中，用户通过指定存储过程的名字并给定参数（如果该存储过程带有参数）来调用执行它。 一个存储过程是一个可编程的函数，它在数据库中创建并保存。它可以有SQL语句和一些特殊的控制结构组成。当希望在不同的应用程序或平台上执">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3764141-be96c7985e3c319d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <title>MySQL存储过程详解 | 徐会闯</title>
+  <title>MySQL存储过程详解 | 牛仔很忙的</title>
   
 
 
@@ -159,7 +159,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">徐会闯</span>
+        <span class="site-title">牛仔很忙的</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -275,7 +275,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="徐会闯">
+      <meta itemprop="name" content="牛仔很忙的">
     </span>
 
     
@@ -333,7 +333,7 @@
       
 
       
-        <p>#存储过程简介<br>我们常用的操作数据库语言SQL语句在执行的时候需要要先编译，然后执行，而存储过程（Stored Procedure）是一组为了完成特定功能的SQL语句集，经编译后存储在数据库中，用户通过指定存储过程的名字并给定参数（如果该存储过程带有参数）来调用执行它。</p>
+        <h1 id="存储过程简介"><a href="#存储过程简介" class="headerlink" title="存储过程简介"></a>存储过程简介</h1><p>我们常用的操作数据库语言SQL语句在执行的时候需要要先编译，然后执行，而存储过程（Stored Procedure）是一组为了完成特定功能的SQL语句集，经编译后存储在数据库中，用户通过指定存储过程的名字并给定参数（如果该存储过程带有参数）来调用执行它。</p>
 <p>一个存储过程是一个可编程的函数，它在数据库中创建并保存。它可以有SQL语句和一些特殊的控制结构组成。当希望在不同的应用程序或平台上执行相同的函数，或者封装特定功能时，存储过程是非常有用的。数据库中的存储过程可以看做是对编程中面向对象方法的模拟。它允许控制数据的访问方式。</p>
 <p>存储过程通常有以下优点：</p>
 <p>(1).存储过程增强了SQL语言的功能和灵活性。存储过程可以用流控制语句编写，有很强的灵活性，可以完成复杂的判断和较复杂的运算。</p>
@@ -341,8 +341,7 @@
 <p>(3).存储过程能实现较快的执行速度。如果某一操作包含大量的Transaction-SQL代码或分别被多次执行，那么存储过程要比批处理的执行速度快很多。因为存储过程是预编译的。在首次运行一个存储过程时查询，优化器对其进行分析优化，并且给出最终被存储在系统表中的执行计划。而批处理的Transaction-SQL语句在每次运行时都要进行编译和优化，速度相对要慢一些。</p>
 <p>(4).存储过程能过减少网络流量。针对同一个数据库对象的操作（如查询、修改），如果这一操作所涉及的Transaction-SQL语句被组织程存储过程，那么当在客户计算机上调用该存储过程时，网络中传送的只是该调用语句，从而大大增加了网络流量并降低了网络负载。</p>
 <p>(5).存储过程可被作为一种安全机制来充分利用。系统管理员通过执行某一存储过程的权限进行限制，能够实现对相应的数据的访问权限的限制，避免了非授权用户对数据的访问，保证了数据的安全。<br>(简介摘自网络)</p>
-<p>#存储过程使用详解</p>
-<ul>
+<h1 id="存储过程使用详解"><a href="#存储过程使用详解" class="headerlink" title="存储过程使用详解"></a>存储过程使用详解</h1><ul>
 <li><p>简单创建一个存储过程，熟悉一下存储过程格式。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DROP PROCEDURE IF EXISTS text;</span><br><span class="line">CREATE PROCEDURE text()</span><br><span class="line">  BEGIN</span><br><span class="line">     #这里写自己的业务</span><br><span class="line">  END;</span><br></pre></td></tr></table></figure>
 </li>
@@ -421,8 +420,7 @@
 <blockquote>
 <p>所有例子，都已经过本人测试。</p>
 </blockquote>
-<p>#最后附上一波MySQL存储过程的基本函数</p>
-<ul>
+<h1 id="最后附上一波MySQL存储过程的基本函数"><a href="#最后附上一波MySQL存储过程的基本函数" class="headerlink" title="最后附上一波MySQL存储过程的基本函数"></a>最后附上一波MySQL存储过程的基本函数</h1><ul>
 <li>字符串类</li>
 </ul>
 <p>CHARSET(str) //返回字串字符集<br>CONCAT (string2 [,… ]) //连接字串<br>INSTR (string ,substring ) //返回substring首次在string中出现的位置,不存在返回0<br>LCASE (string2 ) //转换成小写<br>LEFT (string2 ,length ) //从string2中的左边起取length个字符<br>LENGTH (string ) //string长度<br>LOAD_FILE (file_name ) //从文件读取内容<br>LOCATE (substring , string [,start_position ] ) 同INSTR,但可指定开始位置<br>LPAD (string2 ,length ,pad ) //重复用pad加在string开头,直到字串长度为length<br>LTRIM (string2 ) //去除前端空格<br>REPEAT (string2 ,count ) //重复count次<br>REPLACE (str ,search_str ,replace_str ) //在str中用replace_str替换search_str<br>RPAD (string2 ,length ,pad) //在str后用pad补充,直到长度为length<br>RTRIM (string2 ) //去除后端空格<br>STRCMP (string1 ,string2 ) //逐字符比较两字串大小,<br>SUBSTRING (str , position [,length ]) //从str的position开始,取length个字符,<br>注：mysql中处理字符串时，默认第一个字符下标为1，即参数position必须大于等于1 </p>
@@ -610,7 +608,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#函数的使用"><span class="nav-number">1.</span> <span class="nav-text">函数的使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#存储过程简介"><span class="nav-number">1.</span> <span class="nav-text">存储过程简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#存储过程使用详解"><span class="nav-number">2.</span> <span class="nav-text">存储过程使用详解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数的使用"><span class="nav-number">3.</span> <span class="nav-text">函数的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#最后附上一波MySQL存储过程的基本函数"><span class="nav-number">4.</span> <span class="nav-text">最后附上一波MySQL存储过程的基本函数</span></a></li></ol></div>
             
 
           </div>
